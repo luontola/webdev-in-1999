@@ -41,7 +41,14 @@ function print_pagination_links()
 
     print_pagination_links();
     while ($message = $result->fetch_assoc()) {
-        echo "<p>Message " . htmlspecialchars($message['id']) . ": " . htmlspecialchars($message["content"]) . "</p>\n";
+        $id = htmlspecialchars($message['id']);
+        $content = htmlspecialchars($message['content']);
+        echo <<<EOF
+<p>Message {$id}:
+<br>{$content}
+<br><a href="/edit-message.php?id={$id}">Edit</a></p>
+
+EOF;
     }
     print_pagination_links()
     ?>
