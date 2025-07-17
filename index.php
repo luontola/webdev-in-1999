@@ -5,6 +5,7 @@
     <title>LAMP - Hello world</title>
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.js"></script>
 </head>
 <body>
 
