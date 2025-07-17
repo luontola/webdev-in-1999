@@ -2,9 +2,9 @@
 
 function print_page_header()
 {
-    $uri = $_SERVER['DOCUMENT_URI'];
-    $on_home = $uri == "/index.php" ? ' class="current"' : "";
-    $on_other_page = $uri == "/other-page.php" ? ' class="current"' : "";
+    $current = $_SERVER['SCRIPT_NAME'];
+    $on_home = $current == "/index.php" ? ' class="current"' : "";
+    $on_other_page = $current == "/other-page.php" ? ' class="current"' : "";
     echo <<<END
 <!DOCTYPE html>
 <html lang="en">
