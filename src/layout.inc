@@ -5,6 +5,7 @@ function print_page_header()
     $current = $_SERVER['SCRIPT_NAME'];
     $on_home = $current == "/index.php" ? ' class="current"' : "";
     $on_other_page = $current == "/other-page.php" ? ' class="current"' : "";
+    $on_guestbook = $current == "/guestbook.php" ? ' class="current"' : "";
     echo <<<END
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +22,7 @@ function print_page_header()
     <nav>
         <a href="/"{$on_home}>Home</a>
         <a href="/other-page.php"{$on_other_page}>Other page</a>
+        <a href="/guestbook.php"{$on_guestbook}>Guestbook</a>
     </nav>
     <h1>LAMP Stack</h1>
     <p>Web development like it is 1999</p>
