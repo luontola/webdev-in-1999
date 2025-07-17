@@ -2,6 +2,9 @@
 
 function print_page_header()
 {
+    $uri = $_SERVER['DOCUMENT_URI'];
+    $on_home = $uri == "/index.php" ? ' class="current"' : "";
+    $on_other_page = $uri == "/other-page.php" ? ' class="current"' : "";
     echo <<<END
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +19,15 @@ function print_page_header()
 
 <header>
     <nav>
-        <a href="/">Home</a>
+        <a href="/"{$on_home}>Home</a>
+        <a href="/other-page.php"{$on_other_page}>Other page</a>
     </nav>
     <h1>LAMP Stack</h1>
     <p>Web development like it is 1999</p>
 </header>
 
 <main>
+
 END;
 }
 
@@ -30,6 +35,7 @@ function print_page_footer()
 {
     echo <<<END
 </main>
+
 </body>
 </html>
 END;
