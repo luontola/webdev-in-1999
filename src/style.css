@@ -1,3 +1,9 @@
+/* Simple.css overrides */
+html {
+    scroll-behavior: auto;
+}
+
+/* Custom styles */
 .hello {
     color: red;
 }
