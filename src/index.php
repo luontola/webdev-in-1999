@@ -1,7 +1,7 @@
 <?php
 global $mysqli;
-include "./db.inc";
-include "./layout.inc";
+require_once "./db.inc";
+require_once "./layout.inc";
 
 print_page_header();
 

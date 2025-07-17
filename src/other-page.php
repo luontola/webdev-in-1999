@@ -1,5 +1,5 @@
 <?php
-include "./layout.inc";
+require_once "./layout.inc";
 print_page_header();
 ?>
 
