@@ -4,15 +4,12 @@ $username = 'db';
 $password = 'db';
 $database = 'db';
 
+// https://www.php.net/manual/en/mysqli.construct.php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$mysqli = new mysqli($host, $username, $password, $database);
+$mysqli->set_charset('utf8mb4');
 
-$conn = new mysqli($host, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$result = $conn->query("SELECT 1+2 as result");
-
+$result = $mysqli->query("SELECT 1+2 as result");
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "Result: " . $row["result"] . "<br>";
@@ -21,7 +18,7 @@ if ($result->num_rows > 0) {
     echo "No results found.";
 }
 
-$conn->close();
+$mysqli->close();
 
 ?>
 Done
