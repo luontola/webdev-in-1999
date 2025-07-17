@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>LAMP - Hello world</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -30,7 +32,7 @@ $mysqli->close();
 
 ?>
 
-<p>Done</p>
+<p class="hello">Done</p>
 
 </body>
 </html>
