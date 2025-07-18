@@ -25,7 +25,7 @@ function print_page_header()
         <a href="/guestbook.php"{$on_guestbook}>Guestbook</a>
     </nav>
     <h1>LAMP Stack</h1>
-    <p>Web development like it is 1999</p>
+    <p>Web development like it's 1999: the lost legacy</p>
 </header>
 
 <main>
