@@ -51,7 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "Qui ratione voluptatem sequi nesciunt.",
         "Neque porro quisquam est, qui dolorem ipsum quia dolor.",
         "Sit amet, consectetur, adipisci velit.",
-        "Sed quia non numquam eius modi tempora incidunt ut labore."
+        "Sed quia non numquam eius modi tempora incidunt ut labore.",
+        "Et harum quidem rerum facilis est et expedita distinctio.",
+        "Ut enim ad minima veniam, quis nostrum exercitationem ullam.",
     ];
     $stmt = $conn->prepare("INSERT INTO messages (content) VALUES (?)");
     foreach ($messages as $msg) {
