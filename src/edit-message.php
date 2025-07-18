@@ -5,7 +5,9 @@ require_once "./layout.inc";
 
 $message_id = isset($_REQUEST['id']) ? (int)$_REQUEST['id'] : 1;
 
+$saved = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $saved = true;
     $new_content = $_POST['content'];
     $stmt = $conn->prepare("UPDATE messages SET content = ? WHERE id = ?");
     $stmt->bind_param("si", $new_content, $message_id);
@@ -34,5 +36,9 @@ print_page_header();
 </form>
 
 <?php
+if ($saved) {
+    echo "<p class=\"notice\">Message saved.</p>\n";
+}
+
 print_page_footer();
 ?>
